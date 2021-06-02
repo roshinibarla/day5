@@ -1,0 +1,58 @@
+using System;
+
+public class keerthan
+{
+	public enum choicenum
+	{
+	     sum,
+		 mul,
+		 sub,
+		 div
+	}
+	
+
+
+public static void Main(string[] args)
+{
+	Console.WriteLine("enter number1");
+	int number1=int.Parse(Console.ReadLine());
+	
+	Console.WriteLine("enter number2");
+	int number2=int.Parse(Console.ReadLine());
+	
+	
+    foreach(var item in Enum.GetValues(typeof(choicenum)))
+            {
+                Console.WriteLine(((int)item)+" " +item);
+            }
+	
+	 var arr = Enum.GetValues(typeof(choicenum));
+            for (int i = 0;i< arr.Length; i++)
+            {
+                Console.WriteLine(arr.GetValue(i));
+            }
+
+ 
+
+            int Choice = Convert.ToInt32(Console.ReadLine());
+            switch (Choice)
+            {
+                case (int)choicenum.sum:
+                    Console.WriteLine("Addition of two number is  :- {0}" ,(number1 + number2));
+                    break;
+                case (int)choicenum.mul:
+                    Console.WriteLine("mul of two number is  :- {0}", (number1 * number2));
+                    break;
+                case (int)choicenum.sub:
+                    Console.WriteLine("Asubtractiuoin of two number is  :- {0}", (number1 - number2));
+                    break;
+                case (int)choicenum.div:
+                    Console.WriteLine("division of two number is  :- {0}", (number1/number2));
+                    break;
+                default:
+                    Console.WriteLine("Please enter a valid Choice");
+                    break;
+            }
+            Console.ReadLine();
+}
+}

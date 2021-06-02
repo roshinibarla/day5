@@ -1,0 +1,27 @@
+using System;
+
+public struct Student
+{
+    public string StudentName;
+	public int Rollno;
+  
+}
+
+public class program
+{
+     public static void Main(string[] args)
+	 {
+	     
+		 
+		 Student s1;
+		 Console.WriteLine("enter name");
+		 
+		 s1.StudentName=Console.ReadLine();
+		 
+		 Console.WriteLine("enter roo number");
+		 s1.Rollno=int.Parse(Console.ReadLine());
+		 
+		  Console.WriteLine("Name : " + s1.StudentName +"\n"+ " Rollnum : " + s1.Rollno);
+		  Console.ReadLine();
+	 }
+}

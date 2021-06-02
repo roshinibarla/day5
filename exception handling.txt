@@ -1,0 +1,18 @@
+using System;
+public class keerthan
+{
+	public static void Main(string[] args)
+	{
+   
+	int[] arr=new int[2];
+	
+	try
+	{
+	     Console.WriteLine(arr[9]);
+	}
+	catch
+	{
+	    Console.WriteLine("index out of bound range");
+	}
+}
+}
